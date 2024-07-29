@@ -1,4 +1,9 @@
+
+﻿using AspDotNet_Core_MVC_WebApp.Models;
+using Microsoft.EntityFrameworkCore;
+
 ﻿using Microsoft.EntityFrameworkCore;
+
 
 namespace AspDotNet_Core_MVC_WebApp.Data
 {
@@ -8,6 +13,9 @@ namespace AspDotNet_Core_MVC_WebApp.Data
         {
             
         }
+
+
+        public DbSet<Category> Catogries {  get; set; }
 
 
     }
