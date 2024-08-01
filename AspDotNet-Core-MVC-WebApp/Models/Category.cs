@@ -8,7 +8,7 @@ namespace AspDotNet_Core_MVC_WebApp.Models
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public string DisplayOrder { get; set; }
+        public string DisplayOrder { get; set; } 
 
     }
 }
