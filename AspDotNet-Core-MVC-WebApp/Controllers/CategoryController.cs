@@ -21,5 +21,11 @@ namespace AspDotNet_Core_MVC_WebApp.Controllers
 
             return View(objCategoryList);
         }
+
+        public IActionResult Create()
+        {
+        
+        return View(); 
+        }
     }
 }
