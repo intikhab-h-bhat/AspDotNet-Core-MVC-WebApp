@@ -27,5 +27,16 @@ namespace AspDotNet_Core_MVC_WebApp.Controllers
         
         return View(); 
         }
+
+
+        [HttpPost]
+        public IActionResult Create(Category obj) {
+
+            _dbcontext.Catogries.Add(obj);
+            _dbcontext.SaveChanges();
+
+        return RedirectToAction("Index","Category");
+        
+        }
     }
 }

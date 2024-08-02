@@ -20,9 +20,9 @@ namespace AspDotNet_Core_MVC_WebApp.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().HasData(
-                new Category { Id = 1, Name = "Action", DisplayOrder = "1" },
-                 new Category { Id = 2, Name = "Scifi", DisplayOrder = "1" },
-                  new Category { Id = 3, Name = "History", DisplayOrder = "1" }
+                new Category { Id = 1, Name = "Action", DisplayOrder = 1 },
+                 new Category { Id = 2, Name = "Scifi", DisplayOrder = 1 },
+                  new Category { Id = 3, Name = "History", DisplayOrder = 1 }
                 );
         }
 
