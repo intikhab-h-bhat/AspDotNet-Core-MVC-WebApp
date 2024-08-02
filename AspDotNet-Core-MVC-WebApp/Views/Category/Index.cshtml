@@ -1,4 +1,4 @@
-﻿@model List<Category>
+@model List<Category>
 
 <h1>Category List</h1>
 
@@ -14,12 +14,14 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var obj in Model){
+
+        @foreach(var obj in Model.OrderBy(u=>u.DisplayOrder))
+        {
         <tr>
             <td>@obj.Name</td>
             <td>@obj.DisplayOrder</td>
         </tr>
         }
     </tbody>
-
+   
 </table>
