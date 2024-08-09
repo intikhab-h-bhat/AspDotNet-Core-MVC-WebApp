@@ -32,11 +32,14 @@ namespace AspDotNet_Core_MVC_WebApp.Controllers
         [HttpPost]
         public IActionResult Create(Category obj) {
 
-            _dbcontext.Catogries.Add(obj);
-            _dbcontext.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                _dbcontext.Catogries.Add(obj);
+                _dbcontext.SaveChanges();
 
-        return RedirectToAction("Index","Category");
-        
+                return RedirectToAction("Index", "Category");
+            }
+            return View();
         }
     }
 }
